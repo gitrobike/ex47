@@ -15,3 +15,6 @@ class Room(object):
     def add_paths(self, paths):
         #在paths字典中增加一组键值对
         self.paths.update(paths)
+#
+# def ss(s):
+#     print(s)
