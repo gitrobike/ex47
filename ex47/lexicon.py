@@ -1,9 +1,31 @@
 # -*- coding: utf-8 -*-
 
-# sentence = [('direction', 'north'), ('verb', 'go')]
-
-# = raw_input('> ')
 def scan(stuff):
+    sentence = [
+        ('direction', 'north'),
+        ('direction', 'south'),
+        ('direction', 'east'),
+        ('verb', 'go'),
+        ('stop', 'the'),
+        ('noun', 'bear'),
+        ('number', '1234'),
+        ('error', 'ASDFADFASDF')
+    ]
+
+    sentence_out = []
+    words = stuff.split()
+
+    for word in words:
+        for sentence_word in sentence:
+            if sentence_word[1] == word:
+                sentence_out.append(sentence_word)
+
+    print(sentence_out)
+    return sentence_out
+
+'''#需求理解错误，需更正
+
+def scan(stuff= raw_input('> ')):
 
     first_word = ('direction', 'north')
     second_word = ('verb', 'go')
@@ -12,14 +34,15 @@ def scan(stuff):
     fifth_word = ('number', '1234')
     sixth_word = ('error', 'ASDFADFASDF')
     sentence = [first_word, second_word, third_word, fourth_word, fifth_word, sixth_word]
+    # sentence = {'direction': 'north', 'verb': 'go'}
 
     words = stuff.split()
     print('查看所有获得的词汇:'),
     print(words)
     print('\n')
 
-    sentence_out = []
-    word_sentence_0 = ''
+    sentence_out = []#用于输出最终结果的列表
+    word_sentence_0 = ''#用于储存word_sentence[1]匹配后的word_sentence[0]值
 
     for word_sentence in sentence:
         print('--' * 10),
@@ -41,41 +64,21 @@ def scan(stuff):
                 # print(word_sentence_1)
             else:
                 print('sorry!')
-
-
-    if word_sentence_0 != '':
-        for word in words:
-            print('===' * 10),
-            print('当前词汇:'),
-            print(word),
-            print('===' * 10)
-
-            sentence_out.append((word_sentence_0, word))
-            print("+++")
-
-
-    print(sentence_out)
-    return sentence_out
-
-
-# def scan_much(stuff):
-#     sentence = [('direction', 'north'), ('verb', 'go')]
-#     words = stuff.split()
-#     # print(words)
-#     for word in words:
-#         print('===' * 10)
-#         print(word)
-#         for s_word in sentence:
-#             print('--' * 10)
-#             # print(s_word)
-#             # print(s_word[1])
-#             if s_word[1] == word:
-#                 print("GOOD!")
-#                 print(s_word)
-#             else:
-#                 print("WRONG!")
-#                 print(s_word[1])
-#                 print(word)
-
+#
+#
+#     if word_sentence_0 != '':
+#         for word in words:
+#             print('===' * 10),
+#             print('当前词汇:'),
+#             print(word),
+#             print('===' * 10)
+#
+#             sentence_out.append((word_sentence_0, word))
+#             print("+++")
+#
+#
+#     print(sentence_out)
+#     return sentence_out
+'''
 
 scan("south east north go")

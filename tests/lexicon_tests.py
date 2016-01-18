@@ -9,9 +9,11 @@ from ex47 import lexicon
 def test_directions():
     assert_equal(lexicon.scan("north"), [('direction', 'north')])
     #需要返回一个包含元组的列表
-    result = lexicon.scan("north south east")
+    result = lexicon.scan("north south east ASDFADFASDF")
     assert_equal(result, [('direction', 'north'),
                           ('direction', 'south'),
-                          ('direction', 'east')])
+                          ('direction', 'east'),
+                          ('error', 'ASDFADFASDF')
+                          ])
 
 test_directions()
