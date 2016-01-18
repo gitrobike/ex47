@@ -6,10 +6,18 @@ def scan(stuff):
         ('direction', 'south'),
         ('direction', 'east'),
         ('verb', 'go'),
+        ('verb', 'kill'),
+        ('verb', 'eat'),
         ('stop', 'the'),
+        ('stop', 'in'),
+        ('stop', 'of'),
         ('noun', 'bear'),
-        ('number', '1234'),
-        ('error', 'ASDFADFASDF')
+        ('noun', 'princess'),
+        ('number', 3),
+        ('number', 1234),
+        ('number', 91234),
+        ('error', 'ASDFADFASDF'),
+        ('error', 'IAS')
     ]
 
     sentence_out = []
