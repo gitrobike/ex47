@@ -1,26 +1,24 @@
 # -*- coding: utf-8 -*-
 
-sentence = [
-    ('direction', 'north'),
-    ('direction', 'south'),
-    ('direction', 'east'),
-    ('verb', 'go'),
-    ('verb', 'kill'),
-    ('verb', 'eat'),
-    ('stop', 'the'),
-    ('stop', 'in'),
-    ('stop', 'of'),
-    ('noun', 'bear'),
-    ('noun', 'princess'),
-    ('number', 3),
-    ('number', 1234),
-    ('number', 91234),
-    ('error', 'ASDFADFASDF'),
-    ('error', 'IAS')
-]
-
 def scan(stuff):
-
+    sentence = [
+        ('direction', 'north'),
+        ('direction', 'south'),
+        ('direction', 'east'),
+        ('verb', 'go'),
+        ('verb', 'kill'),
+        ('verb', 'eat'),
+        ('stop', 'the'),
+        ('stop', 'in'),
+        ('stop', 'of'),
+        ('noun', 'bear'),
+        ('noun', 'princess'),
+        ('number', 3),
+        ('number', 1234),
+        ('number', 91234),
+        ('error', 'ASDFADFASDF'),
+        ('error', 'IAS')
+    ]
 
     sentence_out = []
     words = stuff.split()
@@ -91,4 +89,4 @@ def scan(stuff= raw_input('> ')):
 #     return sentence_out
 '''
 
-# scan("south east north go")
+scan("south east north go")
