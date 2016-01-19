@@ -11,6 +11,9 @@ class Sentence(object):
         self.verb = verb[1]
         self.object = object[1]
 
+    def return_sentence(self):
+        return self.subject, self.verb, self.object
+
 def peek(word_list):
     if word_list:
         word = word_list[0]
@@ -81,6 +84,8 @@ def parse_sentence(word_list):
     if start == 'noun':#名词
         subj = match(word_list, 'noun')
         #如果句首是一个名词，那么这个词一定是主语。
+        # re = parse_subject(word_list, subj)
+        # print re.return_sentence()
         return parse_subject(word_list, subj)
     elif start == 'verb': #动词
         #如果局势是一个动词，那么主语默认为“player”
@@ -88,6 +93,6 @@ def parse_sentence(word_list):
     else:
         raise ParserError("Must start with subject（主语）, object（宾语）, or verb（谓语） not: %s" % start)
 
-word_list = lexicon.sentence
-print(word_list)
-print parse_sentence(word_list)
+# word_list = lexicon.scan('the bear is go to the east')
+# print(word_list)
+# print(parse_sentence(word_list))

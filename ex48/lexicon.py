@@ -30,7 +30,7 @@ def scan(stuff):
             if sentence_word[1] == word:
                 sentence_out.append(sentence_word)
 
-    print(sentence_out)
+    # print(sentence_out)
     return sentence_out
 
 '''#需求理解错误，需更正
